@@ -1,0 +1,501 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    scroll-behavior: smooth;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: myFirstFont;
+    src:url(/Images/Azonix.otf)
+}
+
+.developers {
+    font-family: myFirstFont;
+    color: white;
+    font-size: 10vh;
+    text-shadow: 0 0 5px black;
+    padding: 0%;
+}
+
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: -10;
+}
+
+/* -------------- Sección Pantalla de presentación, fuentes y header -------------- */
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+h1 {
+    padding: 1%;
+    font-size: 4vh;
+    font-family: myFirstFont;
+    color: white;
+}
+
+h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: 5vh;
+    font-weight: 100;
+}
+
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-size: 2vh;
+    font-weight: 100;
+}
+
+h1, h2, p, br:hover {
+    cursor: default;
+}
+
+
+.fondo {
+    transform: translateZ(-10px) scale(2);
+}
+
+.frente {
+    transform: translateZ(-5px) scale(1.5);
+}
+
+.fondo,
+.frente {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    z-index: -1;
+}
+/* -------------- FIN SECCIÓN Pantalla de presentación -------------- */
+
+/* -------------- Sección Navbar -------------- */
+.barra {
+    position: sticky;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+.barra1 {
+    text-decoration: none;
+    color:white;
+    border: 3px solid white;
+    padding: 0.5em 3em;
+    margin: auto;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: myFirstFont;
+    font-size: 2vh;
+    width: 100%;
+    opacity: 0.5;
+    z-index: 9;
+    transition-duration: 0.5s;
+}
+
+.barra1:hover {
+    opacity: 1;
+    background-color: #333f4f;
+}
+
+nav{
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    margin: 20px;
+    z-index: 10;
+}
+
+/* -------------- FIN SECCIÓN Navbar -------------- */
+/* -------------- Sección Boton flotante -------------- */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+    z-index: 1;
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+.float:hover, .flecha2:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.float:hover {
+    background-color:#6699ff;
+}
+
+.flecha2 {
+    transition-duration: 0.5s;
+    font-size: 4vh;
+}
+/* -------------- FIN SECCIÓN Boton flotante -------------- */
+
+/* --------------  Sección Main - secciones varias -------------- */
+section {
+    text-align: center;
+    padding: 1px;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about, #how, #prices {
+    background-color: #333f4f;
+    color: white;
+    width: 100vw;
+    margin: 0px;
+}
+
+#services, #team {
+    background-color: #6699ff;
+    color: #201D3D;
+    width: 100vw;
+    margin: 0px;
+}
+/* -------------- FIN SECCIÓN Main -------------- */
+
+/* -------------- Sección Acerca --------------  */
+.somosequipo {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.textofotoacerca {
+    font-size: 2vh;
+
+}
+.contenedoracerca2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.contenedoracerca {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.fotosacerca {
+    height: 20vh;
+    background-color: #201D3D;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 10px 2px black;
+}
+/* -------------- FIN SECCIÓN Acerca -------------- */
+
+/* -------------- Sección Servicios --------------  */
+.contenedorservicios {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.tarjetaservicios{
+    width: 17%;
+    height: 30vh;
+    padding: 10px;
+    border: 2px dashed #333f4f;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #a1c0ff;
+    overflow:hidden;
+    display: flex;
+    justify-content:left;
+    cursor: default;
+}
+
+.tituloserv {
+    color: #333f4f;
+    font-weight: bolder;
+    font-family: myFirstFont;
+}
+
+.subtituloserv {
+    text-align: left;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: lighter;
+}
+/* -------------- FIN SECCIÓN Servicios -------------- */
+
+/* -------------- Sección Cómo Funciona --------------  */
+.contenedorcomo {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.tarjetacomo {
+    width: 25%;
+    padding: 10px;
+    border: 2px dashed #333f4f;
+    border-radius: 15px;
+    margin: 0;
+    background-color: #a1c0ff;
+    overflow:hidden;
+    display: flex;
+    justify-content:left;
+    cursor: default;
+}
+
+.flecha {
+    font-size: 4vh;
+
+}
+/* -------------- FIN SECCIÓN Cómo funciona -------------- */
+
+/* -------------- Sección Equipos --------------  */
+#team {
+    height:auto;
+}
+
+a{
+    color: white;
+
+}
+
+@keyframes fotos {
+    from {box-shadow: 2px 2px 10px 2px black;}
+    to {box-shadow: 6px 6px 20px 1px black;}
+}
+.fotosequipo {
+    height: 20vh;
+    background-color: #201D3D;
+    opacity: 0.7;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10%;
+    box-shadow: 2px 2px 10px 2px black;
+    transition-duration: 0.3s;
+}
+
+.contenedorfotosequipo {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.fotosequipo:hover {
+    opacity: 1;
+    border-style: ridge;
+    animation-name: fotos;
+    animation-duration: 0.3s;
+    box-shadow: 6px 6px 20px 1px black;
+}
+/* -------------- FIN SECCIÓN Equipos -------------- */
+
+/* -------------- Sección Financiamiento  -------------- */
+.contenedorfinanciamiento {
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tarjetafinan {
+    width: 15%;
+    height: 50vh;
+    padding: 10px;
+    border: 2px solid #333f4f;
+    border-radius: 15px;
+    margin: 0 1%;
+    background-color: #6699ff;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    transition-duration: 0.2s;
+    opacity: 0.8;
+    box-shadow: 0px 0px 0px 0px 5px 2px rgba(255, 255, 255, 0.493);
+}
+
+.tarjetafinan:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 20px 1px rgba(255, 255, 255, 0.493);
+    cursor: pointer;
+}
+
+.titulofinan {
+    color: white;
+    font-weight: bolder;
+    font-family: myFirstFont;
+}
+
+.subtitulofinan {
+    text-align: center;
+    color:white;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: lighter;
+    
+}
+
+.compra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4vh;
+    border: 1px solid;
+}
+
+.contratalo {
+    font-family: myFirstFont;
+}
+.titulofinan, .subtitulofinan, .contratalo:hover {
+    cursor: pointer;
+}
+/* -------------- FIN SECCIÓN Financiamiento -------------- */
+
+/* -------------- Sección Formularios de Contacto  -------------- */
+#contact {
+    background-color: #6699ff;
+    color: #201D3D;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+form {
+    width: 100%;
+    max-width: 32rem;
+    margin: auto;
+
+}
+
+.formulario {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    height: 30%;
+    resize: none;
+}
+
+fieldset {
+    width: 100%;
+    overflow: hidden;
+    padding: 2%;
+}
+
+label {
+    padding: 1%;
+    font-weight: bold;
+    padding-left:26px;
+    width:125px;
+    text-transform: uppercase;
+}
+
+input {
+    padding: 2%;
+    border-radius: 15px;
+}
+
+#botones {
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.boton1 {
+    border: none;
+    background-color: #333f4f;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+.boton1:hover {
+    background-color:#6699ff; 
+    border: solid 1px;
+    color:#333f4f;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton2 {
+    border: none;
+    transition-duration: 0.2s;
+}
+
+.boton2:hover {
+    background-color: lightcoral; 
+    border: solid 1px;
+    color:#333f4f;
+    cursor: pointer;
+}
+/* -------------- FIN SECCIÓN Formularios -------------- */
+
+/* --------------  Sección Footer --------------  */
+footer {
+    background-color: #333f4f;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.fa{
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+.fa:hover {
+    opacity: 0.5;
+    text-shadow: 1px 1px 5px 5px lightblue;
+}

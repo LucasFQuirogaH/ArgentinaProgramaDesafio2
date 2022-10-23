@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="" />
+	<meta name="author" content="Lucas Quiroga, derechos reservados" />
+	<script src="https://kit.fontawesome.com/10946150d6.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/CSS/lq_styles.css">
+	<title>Lucas F. Quiroga H.</title>
+	<link rel="shortcut icon" href="/Images/gt_favicon.png" />
+</head>
+
+<body class="home">
+	<!-- --------------------------------------------------------------------------------------------------------------- -->
+	<header>
+		<div id="head">
+			<h1><img class="img-circle" src="/Images/photo_2019-10-03_17-15-34.jpg" alt=""></img>
+				<div class="edicionPerfil">
+					<button>editar</button>
+				</div>
+				<span class="title">Lucas F. Quiroga H.</span>
+				<span class="tagline">Ingeniero electronico - Programador<br /></span>
+				<span class="tagline">Buenos Aires, Argentina<br /></span>
+			</h1>
+		</div> <!-- /Portada -->
+		<!-- --------------------------------------------------------------------------------------------------------------- -->
+	</header>
+	<!-- --------------------------------------------------------------------------------------------------------------- -->
+	<main>
+
+		<!-- Seccion acerca de  -->
+		<h2 class="section-title">
+			<span>Acerca de</span>
+			<!-- boton -->
+			<div onclick="cambiarParrafo()"><a><i class="fa-solid fa-pen"></i></a>
+				<!-- <button class="botonEdita">editar</button> -->
+			</div>
+			<!-- fin de boton -->
+		</h2>
+		<!-- fin del nombre con boton -->
+
+		<!-- contenido de la seccion -->
+		<div class="container1">
+			<div class="extractoGral">
+				<p id="textoAcercaDe" class="extracto">
+					Aqui escribimos algo de acrca de
+				</p>
+			</div>
+		</div>
+		<!-- fin del contenido -->
+
+		<!-- ventana de edicion del texto -->
+		<div>
+			<input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
+		</div>
+		<!-- fin de ventana de edicion de texto -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- fin de la seccion -->
+		<!-- --------------------------------------------------------------------------------------------------------------- -->
+		<!-- nombre de la seccion -->
+		<h2 class="section-title">
+			<span>Experiencia</span>
+			<button class="botonAgrega">+</button>
+		</h2>
+		<!-- contenido de la seccion -->
+		<div class="container1">
+			<div class="extractoGral">
+				<p class="extracto">
+					Aqui escribimos algo
+				</p>
+			</div>
+		</div>
+		<!-- fin de la seccion -->
+		<!-- --------------------------------------------------------------------------------------------------------------- -->
+		<!-- nombre de la seccion -->
+		<h2 class="section-title">
+			<span>Hard Skills & Soft Skills</span>
+			<button class="botonAgrega">+</button>
+		</h2>
+		<!-- contenido de la seccion -->
+		<div class="container1">
+			<div class="extractoGral">
+				<p class="extracto">
+					Aqui escribimos algo
+				</p>
+			</div>
+		</div>
+		<!-- fin de la seccion -->
+		<!-- --------------------------------------------------------------------------------------------------------------- -->
+		<!-- nombre de la seccion -->
+		<h2 class="section-title">
+			<span>Proyectos</span>
+			<button class="botonAgrega">+</button>
+		</h2>
+		<!-- contenido de la seccion -->
+		<div class="container1">
+			<div class="extractoGral">
+				<p class="extracto">
+					Aqui escribimos algo
+				</p>
+			</div>
+		</div>
+		<!-- fin de la seccion -->
+		<!-- --------------------------------------------------------------------------------------------------------------- -->
+		<!-- --------------------------------------------------------------------------------------------------------------- -->
+	</main>
+
+	<!--codigo Javascript de la seccion -->
+	<script>
+		// funcion que cambia el parrafo
+		function cambiarParrafo() {
+			document.getElementById("entradaDeTexto").style.display = "block"; //Pones la clase del input y le cambias el estilo para que aparezca
+			let texto = document.getElementById("textoAcercaDe").innerText;
+			console.log(texto);
+		}
+		// fin de la funcion cambia el parrafo
+
+		// funcion que agrega lo que escribi a la seccion
+		function completaEdicion(valor) {
+			document.getElementById("textoAcercaDe").innerText = valor;
+		}
+		// fin de la funcion que agrega lo que escribi a la seccion
+
+		// Todo este codigo para que cuando apretes enter se vaya la ventana de edicion
+		function logMessage(message){
+			console.log(message + "</br>");
+		}
+		// Codigo de control de presion de la tecla enter
+		let textarea=document.getElementById("entradaDeTexto");
+		textarea.addEventListener('keyup', (e) => {
+			logMessage(`key "${e.key}" released [event: keyup]`);
+			if (e.key=="Enter"){
+				document.getElementById("entradaDeTexto").style.display="none"
+			}
+		});
+		// Carga el contenido de un archivo de texto y lo muestra
+		function showFile(input){
+			let file = input.file[0];
+			alert(`File name: ${file.name}`);
+			alert(`Last modified: ${file.lastModified}`);
+			let reader=new FileReader();
+			reader.readAsText(file);
+			reader.onload=function(){
+				console.log(reader.result);
+				document.getElementById("entradaDeTexto").innerText=reader.result;
+			}
+			reader.onerror = function(){
+				console.log(reader.error);
+			}
+		}
+		// Fin de la carga del contenido
+	</script>
+	<!-- fin de codigo Javascript de la seccion -->
+
+</body>
+
+</html>

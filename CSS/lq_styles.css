@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #666666;
+    padding: 0;
+}
+/* ----------------------------------Home ----------------------------------------- */
+.home #head {
+    padding: 100px 0;
+}
+
+.home #head .title {
+    font-size: 49px;
+    font-size: 3.0625rem;
+}
+
+.home #head .tagline {
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 15px 0 0;
+}
+/* ----------------------------------Home ----------------------------------------- */
+
+/* ----------------------------------Head ----------------------------------------- */
+#head {
+    background: #f4f4f4 url(../Images/bg_head.jpg) top center;
+    background-size: cover;
+    color: #7c7c7c;
+    padding: 30px 0 35px 0;
+}
+
+#head img.img-circle {
+    display: block;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 9px solid rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+}
+#head .title {
+    font-family: "Roboto", sans-serif;
+    font-size: 49px;
+    font-size: 3.0625rem;
+    display: flex;
+    justify-content: center;
+}
+
+#head .tagline {
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.2em;
+    color: #7c7c7c;
+    display: flex;
+    justify-content: center;
+}
+
+#head .edicionPerfil{
+    position: absolute;
+    left: 55%;
+    top: 40%;
+}
+/* ------------------------------------------------------------container */
+.botonEdita{
+    font-size: 40%;
+}
+/* ------------------------------------------------------------container */
+.container1 {
+    min-width: 100%;
+}
+
+.extractoGral{
+    padding: 20 0 0 0;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------Section - container2 */
+
+.section-title {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin: 10px 0px 25px;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 27px;
+    letter-spacing: 1px;
+}
+.section-title a {
+    color: #333333;
+}
+.section-title span {
+    display: inline-block;
+    position: relative;
+}
+.section-title span:before,
+.entry-title span:before,
+.section-title span:after,
+.entry-title span:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 0.53em;
+    width: 400%;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.section-title span:before,
+.entry-title span:before {
+    right: 100%;
+    margin-right: 45px;
+}
+.section-title span:after,
+.entry-title span:after {
+    left: 100%;
+    margin-left: 75px;
+}
+
+/* Max page width
+/////////////////////////////////////////////////////////////////////*/
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1080px;
+    }
+}
+
+/* ----------------------------------- tipografia */
+p {
+    line-height: 1.6em;
+    margin: 0 0 30px 0;
+}
+ul,
+ol {
+    line-height: 1.6em;
+    margin: 0 0 30px 0;
+}
+
+h1,
+h2,
+h3,
+h4
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-family: "Open sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #333333;
+}
+h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+}
+h3 {
+    font-size: 30px;
+    font-size: 1.875rem;
+}
+h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+}
