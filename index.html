@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head para colocar dependencias -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/10946150d6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/estilo.css">
+    <title>Lucas Quiroga</title>
+</head>
+<!-- fin de head -->
+
+
+<body>
+    <!-- comienzo de portada -->
+    <div class="portada">
+        <div class="contenedorFotoPortada">
+            <img class="fotoPortada" src="/assets/Images/bg_head.jpg" alt="">
+        </div>
+        <div class="contenedorPerfil">
+            <img class="fotoPerfil" src="/assets/Images/photo_2019-10-03_17-15-34.jpg" alt="">
+        </div>
+        <div class="contenedorFacultad">
+            <img class="fotoFacultad" src="/assets/Images/FI_UNSJ.png" alt="">
+        </div>
+        <div class="contenedorNombre">
+            <h2 class="estiloNombre estiloUnico">Lucas F. Quiroga H.</h2>
+        </div>
+        <div class="contenedorTitulo">
+            <h3 class="contenidoTitulo estiloUnico">Ingeniero electronico - Programador</h2>
+        </div>
+        <div class="contenedorUbicacion">
+            <h4 class="contenidoUbicacion estiloUnico">Buenos Aires - Argentina</h4>
+        </div>
+        <div class="contenedorInteres">
+            <button type="button">Tengo interes en</button>
+        </div>
+        <div class="contenedorAgregarSeleccion">
+            <button type="button">Agregar seleccion</button>
+        </div>
+        <div class="contenedorMas">
+            <button type="button">Mas</button>
+        </div>
+    </div>
+    <!-- fin de portada -->
+
+    <!-- Comienzo de acerca de -->
+    <div class="contenedorDeLaSeleccion">
+        <div class="contenedorDeTituloYLapiz">
+            <div>
+                <h1 class="contenidoSeleccion estiloUnico">Acerca de</h1>
+            </div>
+            <div class="contenedorLapicito" onclick="cambiarParrafo()"><a><i class="fa-solid fa-pen"></i></a>
+            </div>
+        </div>
+        <!------- contenido  --------->
+        <div class="container1">
+            <div class="extractoGral">
+                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
+                    Escribe algo aqui acerca de ti
+                </p>
+            </div>
+        </div>
+        <!------- ventana de entrada  --------->
+        <div>
+            <input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
+        </div>
+    </div>
+    <!-- fin de acerca de  -->
+
+    <!-- comienzo de experiencia -->
+    <div class="contenedorDeLaSeleccion">
+        <div class="contenedorDeTituloYLapiz">
+            <div>
+                <h1 class="contenidoSeleccion estiloUnico">Experiencia</h1>
+            </div>
+            <div class="contenedorLapicito" onclick="cambiarParrafo()"><a><i class="fa-solid fa-pen"></i></a>
+            </div>
+        </div>
+        <!------- contenido  --------->
+        <div>
+            <div>
+                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
+                    Escribe algo aqui acerca de ti
+                </p>
+            </div>
+        </div>
+        <!------- ventana de entrada  --------->
+        <div>
+            <input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
+        </div>
+    </div>
+    <!-- fin de experiencia -->
+
+    <!-- comienzo de hard skills & soft skills -->
+    <div class="contenedorDeLaSeleccion">
+        <div class="contenedorDeTituloYLapiz">
+            <div>
+                <h1 class="contenidoSeleccion estiloUnico">Hard skills & soft skills</h1>
+            </div>
+            <div class="contenedorLapicito" onclick="cambiarParrafo()"><a><i class="fa-solid fa-pen"></i></a>
+            </div>
+        </div>
+        <!------- contenido  --------->
+        <div>
+            <div>
+                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
+                    Escribe algo aqui acerca de ti
+                </p>
+            </div>
+        </div>
+        <!------- ventana de entrada  --------->
+        <div>
+            <input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
+        </div>
+    </div>
+    <!-- fin de hard skills & soft skills -->
+
+    <!-- comienzo de proyectos -->
+    <div class="contenedorDeLaSeleccion">
+        <div class="contenedorDeTituloYLapiz">
+            <div>
+                <h1 class="contenidoSeleccion estiloUnico">Proyectos</h1>
+            </div>
+            <div class="contenedorLapicito" onclick="cambiarParrafo()"><a><i class="fa-solid fa-pen"></i></a>
+            </div>
+        </div>
+        <!------- contenido  --------->
+        <div>
+            <div>
+                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
+                    Escribe algo aqui acerca de ti
+                </p>
+            </div>
+        </div>
+        <!------- ventana de entrada  --------->
+        <div>
+            <input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
+        </div>
+    </div>
+    <!-- fin de proyectos -->
+
+
+    <!--codigo Javascript de la seccion -->
+    <script>
+        // funcion que cambia el parrafo
+        function cambiarParrafo() {
+            document.getElementById("entradaDeTexto").style.display = "block"; //Pones la clase del input y le cambias el estilo para que aparezca
+            let texto = document.getElementById("textoAcercaDe").innerText;
+            console.log(texto);
+        }
+        // fin de la funcion cambia el parrafo
+
+        // funcion que agrega lo que escribi a la seccion
+        function completaEdicion(valor) {
+            document.getElementById("textoAcercaDe").innerText = valor;
+        }
+        // fin de la funcion que agrega lo que escribi a la seccion
+
+        // Todo este codigo para que cuando apretes enter se vaya la ventana de edicion
+        function logMessage(message) {
+            console.log(message + "</br>");
+        }
+        // Codigo de control de presion de la tecla enter
+        let textarea = document.getElementById("entradaDeTexto");
+        textarea.addEventListener('keyup', (e) => {
+            logMessage(`key "${e.key}" released [event: keyup]`);
+            if (e.key == "Enter") {
+                document.getElementById("entradaDeTexto").style.display = "none"
+            }
+        });
+        // Carga el contenido de un archivo de texto y lo muestra
+        function showFile(input) {
+            let file = input.file[0];
+            alert(`File name: ${file.name}`);
+            alert(`Last modified: ${file.lastModified}`);
+            let reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function () {
+                console.log(reader.result);
+                document.getElementById("entradaDeTexto").innerText = reader.result;
+            }
+            reader.onerror = function () {
+                console.log(reader.error);
+            }
+        }
+    // Fin de la carga del contenido
+    </script>
+    <!-- fin de codigo Javascript de la seccion -->
+</body>
+
+</html>
