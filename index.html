@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- head para colocar dependencias -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,6 @@
     <title>Lucas Quiroga</title>
 </head>
 <!-- fin de head -->
-
 
 <body>
     <!-- comienzo de portada -->
@@ -58,7 +58,11 @@
         <div class="container1">
             <div class="extractoGral">
                 <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
-                    Escribe algo aqui acerca de ti
+                    Estratega nacido en el mundo de la tecnología y comunicación, iniciado en el “lado oscuro” del
+                    contenido, apasionado por los retos, pro-activo y empático. Baso mi trabajo en las ideas
+                    innovadoras, capaces de romper la barrera de lo incapaz e improbable. Creo en el valor diferencial
+                    de la creatividad por encima de todas las cosas, en la capacidad creativa de todo el que me rodea.
+                    Capaz de enfrentarme a casi cualquier proyecto, con documentación y contraste de datos.
                 </p>
             </div>
         </div>
@@ -80,16 +84,27 @@
         </div>
         <!------- contenido  --------->
         <div>
-            <div>
-                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
-                    Escribe algo aqui acerca de ti
-                </p>
+            <div class="contenidoDeExperiencia estiloUnico">
+                <ul>
+                    <li>
+                        <h3>Telecentro (<time>2019</time> - <time>2022) </h3>
+                        <p>Programador de base de datos y auditorias externas en campo</p>
+                        <p></time></p>
+                    </li>
+                    <li>
+                        <h3>Instituto Naval (<time>2017</time> - <time>2018) </h3>
+                        <p>Programador de base de datos y auditorias externas en campo</p>
+                        <p></time></p>
+                    </li>
+                </ul>
             </div>
         </div>
-        <!------- ventana de entrada  --------->
-        <div>
-            <input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
-        </div>
+    </div>
+    </div>
+    <!------- ventana de entrada  --------->
+    <div>
+        <input id="entradaDeTexto" type="text" oninput="completaEdicion(this.value)" style="display: none;">
+    </div>
     </div>
     <!-- fin de experiencia -->
 
@@ -104,11 +119,9 @@
         </div>
         <!------- contenido  --------->
         <div>
-            <div>
-                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
-                    Escribe algo aqui acerca de ti
-                </p>
-            </div>
+            <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
+                Aqui vamos a colocar los circulos con porcentaje
+            </p>
         </div>
         <!------- ventana de entrada  --------->
         <div>
@@ -127,12 +140,32 @@
             </div>
         </div>
         <!------- contenido  --------->
-        <div>
-            <div>
-                <p id="textoAcercaDe" class="estiloUnico contenidoDeParrafo">
-                    Escribe algo aqui acerca de ti
-                </p>
+        <div class="contenedorDeTrabajos">
+            <!-- cuadrito 1 -->
+            <div class="ordenEnCuadroConGrid">
+                <div class="ordenSimple">
+                    <div class="padre">
+                        <img src="/assets/Images/s1.jpg" alt="" class="fotoTrabajo" />
+                        <div class="hijo">
+                            <a class="estiloUnico" href="https://soundcloud.com/lucquiferok" target="_blank">Pagina de la musica que hago</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- cuadrito 2 -->
+                <div class="ordenEnCuadroConFlex">
+                    <div class="ordenSimple">
+                        <img src="/assets/Images/s1.jpg" alt="" class="fotoTrabajo" />
+                        <div>
+                            <a class="estiloUnico" href="https://soundcloud.com/lucquiferok" target="_blank">Pagina de la musica que hago</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+
         </div>
         <!------- ventana de entrada  --------->
         <div>
@@ -140,6 +173,30 @@
         </div>
     </div>
     <!-- fin de proyectos -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!--codigo Javascript de la seccion -->
